@@ -12,7 +12,11 @@
     "format": "biome format --write .",
     "typecheck": "tsc --build",
     "build": "bun run --filter '*' build",
-    "test": "bun test"
+    "start": "bun run --env-file .env --filter @repo/api start",
+    "test": "bun test",
+    "docker:up": "docker compose up -d --wait",
+    "docker:down": "docker compose down",
+    "docker:rebuild": "docker compose up -d --build --wait"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.4",
