@@ -1,6 +1,6 @@
-// Stub - filled in by T2/T3
-// This file exports the Elysia app type consumed by apps/web via Eden Treaty (type-only import)
+import { Elysia } from 'elysia'
+import { health } from './modules/health/index.js'
 
-export const app = {} as const
+export const app = new Elysia().use(health)
 
 export type App = typeof app

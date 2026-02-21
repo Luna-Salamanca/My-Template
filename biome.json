@@ -13,10 +13,12 @@
       },
       "style": {
         "useConst": "error",
-        "useImportType": "error"
+        "useImportType": "error",
+        "noParameterAssign": "warn"
       },
       "suspicious": {
-        "noExplicitAny": "warn"
+        "noExplicitAny": "warn",
+        "noExtraNonNullAssertion": "warn"
       }
     }
   },
