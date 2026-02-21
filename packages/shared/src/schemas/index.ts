@@ -1,29 +1,25 @@
-import { type Static, Type } from '@sinclair/typebox'
+import { type Static, t } from 'elysia'
 
 // Tier
-export const TierSchema = Type.Union([
-  Type.Literal('admin'),
-  Type.Literal('member'),
-  Type.Literal('guest'),
-])
+export const TierSchema = t.Union([t.Literal('admin'), t.Literal('member'), t.Literal('guest')])
 
 export type Tier = Static<typeof TierSchema>
 
 // User
-export const UserSchema = Type.Object({
-  id: Type.String({ format: 'uuid' }),
-  discordId: Type.String(),
-  username: Type.String(),
-  avatarUrl: Type.Union([Type.String(), Type.Null()]),
+export const UserSchema = t.Object({
+  id: t.String({ format: 'uuid' }),
+  discordId: t.String(),
+  username: t.String(),
+  avatarUrl: t.Union([t.String(), t.Null()]),
   tier: TierSchema,
 })
 
 export type User = Static<typeof UserSchema>
 
 // Auth tokens
-export const AuthTokensSchema = Type.Object({
-  accessToken: Type.String(),
-  refreshToken: Type.String(),
+export const AuthTokensSchema = t.Object({
+  accessToken: t.String(),
+  refreshToken: t.String(),
 })
 
 export type AuthTokens = Static<typeof AuthTokensSchema>

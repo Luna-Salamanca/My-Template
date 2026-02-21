@@ -31,6 +31,19 @@ bun-debug.log*
 
 # TypeScript
 *.tsbuildinfo
+*.d.ts
+*.d.ts.map
+
+# Compiled JavaScript
+**/*.js
+**/*.js.map
+
+!biome.json
+!package.json
+!*.config.js
+
+# Biome
+.biome_cache
 
 # IDEs and editors
 .vscode/*

@@ -6,11 +6,16 @@
   "exports": {
     ".": "./src/schemas/index.ts"
   },
+  "types": "./src/schemas/index.ts",
   "scripts": {
-    "typecheck": "tsc --noEmit",
-    "build": "echo 'No separate build step for shared package'"
+    "typecheck": "tsc --build",
+    "build": "echo 'Build handled by root tsc'"
   },
   "dependencies": {
-    "@sinclair/typebox": "^0.33.0"
+    "@sinclair/typebox": "^0.34.48",
+    "elysia": "^1.4.25"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0"
   }
 }

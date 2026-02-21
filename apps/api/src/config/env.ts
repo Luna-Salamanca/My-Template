@@ -14,6 +14,7 @@ const EnvSchema = Type.Object({
   ADMIN_ROLE_IDS: Type.String(),
   MEMBER_ROLE_IDS: Type.String(),
   DISCORD_INVITE_URL: Type.String(),
+  FRONTEND_URL: Type.String(),
   NODE_ENV: Type.Union([
     Type.Literal('development'),
     Type.Literal('production'),

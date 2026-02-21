@@ -2,8 +2,8 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "biomejs.biome",
   "editor.codeActionsOnSave": {
-    "quickfix.biome": "explicit",
-    "source.organizeImports.biome": "explicit"
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "always"
   },
   "[javascript]": {
     "editor.defaultFormatter": "biomejs.biome"
@@ -22,5 +22,16 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "biomejs.biome"
+  },
+  "files.exclude": {
+    "**/*.js": { "when": "$(basename).ts" },
+    "**/*.js.map": { "when": "$(basename).ts" },
+    "**/*.d.ts": { "when": "$(basename).ts" },
+    "**/*.d.ts.map": { "when": "$(basename).ts" }
+  },
+  "search.exclude": {
+    "**/*.js": true,
+    "**/*.d.ts": true,
+    "**/*.tsbuildinfo": true
   }
 }
