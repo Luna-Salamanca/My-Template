@@ -1,0 +1,17 @@
+{
+  "name": "@repo/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "echo 'Stub - implemented in T5'",
+    "dev": "echo 'Stub - implemented in T5'"
+  },
+  "dependencies": {
+    "@repo/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@repo/api": "workspace:*"
+  }
+}
